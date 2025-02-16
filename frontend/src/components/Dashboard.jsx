@@ -67,8 +67,7 @@ function Dashboard() {
       setSelectedConversation(null);
       setPrompt("");
     };
-    console.log("chat history",chatHistory )
-  
+      
     return (
       <div className="flex h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
         <div className="w-64 bg-gray-900 shadow-lg flex flex-col">
