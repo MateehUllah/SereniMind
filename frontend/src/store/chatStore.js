@@ -2,13 +2,11 @@ import { create } from "zustand";
 
 const useChatStore = create((set) => ({
   chatHistory: [],
-  selectedChat: null,
-  responseType: "text-to-text",
+  selectedConversation: null,
   loading: false,
 
   setChatHistory: (history) => set({ chatHistory: history }),
-  setSelectedChat: (chat) => set({ selectedChat: chat }),
-  setResponseType: (type) => set({ responseType: type }),
+  setSelectedConversation: (conversation) => set({ selectedConversation: conversation }),
   setLoading: (status) => set({ loading: status }),
 }));
 

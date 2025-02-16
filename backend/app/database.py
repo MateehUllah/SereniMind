@@ -1,4 +1,5 @@
 import sqlite3
+from uuid import uuid4
 
 # Connect to SQLite database
 conn = sqlite3.connect("database.db", check_same_thread=False)
@@ -14,14 +15,23 @@ cursor.execute("""
     )
 """)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS chats (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+    CREATE TABLE IF NOT EXISTS conversations (
+        id TEXT PRIMARY KEY,
         user_id INTEGER,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+""")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS messages (
+        id TEXT PRIMARY KEY,
+        user_id INTEGER,
+        conversation_id TEXT,
         user_message TEXT,
         bot_response TEXT,
         mood TEXT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (user_id) REFERENCES users(id)
+        FOREIGN KEY (user_id) REFERENCES users(id),
+        FOREIGN KEY (conversation_id) REFERENCES conversations(id)
     )
 """)
 conn.commit()
