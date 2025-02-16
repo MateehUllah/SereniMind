@@ -13,7 +13,7 @@ export const useRegister = () => {
       navigate("/login")
     },
     onError: (err) => {
-        showToast(err.message || "Registration failed!", "error") // ✅ Error toast
+        showToast(err.message || "Registration failed!", "error")
       },
   })
 }

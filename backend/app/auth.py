@@ -72,7 +72,7 @@ async def login(user_data: UserLogin):
         return {
             "access_token": token,
             "token_type": "bearer",
-            "user": {"id": user_id, "username": username,"email": user_data.email}  # Send user data to frontend
+            "user": {"id": user_id, "username": username,"email": user_data.email} 
         }
     
     except Exception as e:
