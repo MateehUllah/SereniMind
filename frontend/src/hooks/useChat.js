@@ -25,6 +25,7 @@ export const useSendMessage = () => {
     mutationFn: async ({ message, conversationId }) => {
       setLoading(true);
       const response = await sendMessage({ message, conversationId });
+      console.log("I am in response",response)
       return response;
     },
     onSuccess: (response) => {

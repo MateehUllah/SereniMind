@@ -1,9 +1,9 @@
-CRISIS_WORDS = [
-    "suicide", "self-harm", "kill myself", "end my life", "hopeless", "worthless",
-    "no way out", "cut myself", "giving up", "depressed", "can't go on", "want to die"
-]
+CRISIS_WORDS = ["suicide", "depressed", "self-harm", "kill myself", "hopeless", "give up"]
 
-MOOD_VERBS = [
-    "happy", "sad", "angry", "anxious", "depressed", "stressed", "relaxed",
-    "worried", "nervous", "hopeless", "frustrated", "overwhelmed", "lonely"
-]
+DETECT_MOOD = {
+    "happy": ["joy", "excited", "great", "happy", "pleased", "wonderful"],
+    "sad": ["sad", "unhappy", "down", "miserable", "depressed", "gloomy"],
+    "angry": ["angry", "furious", "annoyed", "frustrated", "mad"],
+    "anxious": ["nervous", "worried", "anxious", "stressed", "scared"],
+    "calm": ["calm", "relaxed", "peaceful", "content"],
+}

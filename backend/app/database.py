@@ -29,6 +29,7 @@ cursor.execute("""
         user_message TEXT,
         bot_response TEXT,
         mood TEXT,
+        is_crisis BOOLEAN,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (user_id) REFERENCES users(id),
         FOREIGN KEY (conversation_id) REFERENCES conversations(id)

@@ -10,5 +10,6 @@ export const sendMessage = async ({ message, conversationId }) => {
     user_message: message,
     conversation_id: conversationId,
   });
+  console.log(response.data)
   return response.data;
 };

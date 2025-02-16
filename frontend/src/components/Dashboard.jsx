@@ -67,7 +67,7 @@ function Dashboard() {
       setSelectedConversation(null);
       setPrompt("");
     };
-    console.log("selectedConversation history",selectedConversation)
+    console.log("chat history",chatHistory )
   
     return (
       <div className="flex h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
@@ -99,7 +99,7 @@ function Dashboard() {
         {/* Main Chat Area */}
         <div className="flex flex-1 flex-col">
           <header className="bg-gray-800 p-4 shadow-md flex justify-between">
-            <h1 className="text-2xl font-bold text-gray-200">AI Chat Dashboard</h1>
+            <h1 className="text-2xl font-bold text-gray-200">SereniMind – Your AI Companion for Calm, Clarity, and Support.</h1>
             <button onClick={logout} className="bg-red-600 px-4 py-2 rounded-md text-white hover:bg-red-700">
               Logout
             </button>
@@ -120,7 +120,7 @@ function Dashboard() {
             </form>
   
             {/* Chat Messages */}
-            <div className="rounded-lg bg-gray-800 p-4 shadow-lg h-[400px] overflow-y-auto">
+            <div className="rounded-lg bg-gray-800 p-4 shadow-lg h-[80vh] overflow-y-auto">
               <h2 className="mb-4 text-xl font-semibold text-gray-200">Chat</h2>
               <div className="space-y-4">
               {selectedConversation ? (
